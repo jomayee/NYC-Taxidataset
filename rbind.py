@@ -1,0 +1,46 @@
+import pandas
+import datetime
+import os
+
+input1=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-01.csv")
+input2=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-02.csv")
+input3=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-03.csv")
+input4=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-04.csv")
+input5=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-05.csv")
+input6=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-06.csv")
+input7=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-07.csv")
+input8=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-08.csv")
+input9=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-09.csv")
+input10=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-10.csv")
+input11=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-11.csv")
+input12=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2015-12.csv")
+input13=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2016-01.csv")
+input14=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2016-02.csv")
+input15=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2016-03.csv")
+input16=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2016-04.csv")
+input17=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2016-05.csv")
+input18=pandas.read_csv("/users/jpanda/ML/NYC/final_yellow_tripdata_2016-06.csv")
+
+input1=pandas.DataFrame(input1)
+input2=pandas.DataFrame(input2)
+input3=pandas.DataFrame(input3)
+input4=pandas.DataFrame(input4)
+input5=pandas.DataFrame(input5)
+input6=pandas.DataFrame(input6)
+input7=pandas.DataFrame(input7)
+input8=pandas.DataFrame(input8)
+input9=pandas.DataFrame(input9)
+input10=pandas.DataFrame(input10)
+input11=pandas.DataFrame(input11)
+input12=pandas.DataFrame(input12)
+input13=pandas.DataFrame(input13)
+input14=pandas.DataFrame(input14)
+input15=pandas.DataFrame(input15)
+input16=pandas.DataFrame(input16)
+input17=pandas.DataFrame(input17)
+input18=pandas.DataFrame(input18)
+
+finalfile=pandas.concat([input1, input2, input3, input4, input5, input6, input7, input8, input9, input10, input11, input12, input13, input14, input15, input16, input17, input18], ignore_index=True)
+
+finalfile.to_csv("/users/jpanda/ML/NYCTraffic/finalinput.csv", index=False)
+	
